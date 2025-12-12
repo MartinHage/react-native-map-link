@@ -567,6 +567,20 @@ export const generateMapUrl = ({
         url = `https://share.here.com/r/${sourceLat && sourceLng ? `${sourceLat},${sourceLng}/` : ''}${lat},${lng}?m=d`;
       }
       break;
+    case 'tomtomgo':
+      if (address) {
+        throw new MapsException(
+          'tomtom-go does not support passing the address or has not been implemented yet.',
+        );
+      } else {
+        if (isIOS) {
+          url = `${prefixes["tomtomgo"]}x-callback-url/navigate?destination=${latlng}`;
+        } else {
+          // Android - Generic geo URL, the tomtom go app does not support deeplink to the specific app on android
+          url = `geo:${latlng}`;
+        }
+      }
+    break;
   }
 
   return url;

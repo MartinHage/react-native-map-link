@@ -570,7 +570,7 @@ export const generateMapUrl = ({
     case 'tomtomgo':
       if (address) {
         throw new MapsException(
-          'tomtom-go does not support passing the address or has not been implemented yet.',
+          'tomtomgo does not support passing the address or has not been implemented yet.',
         );
       } else {
         if (isIOS) {

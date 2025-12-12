@@ -73,7 +73,7 @@ export const generateTitles = (
     petalmaps: 'Petal Maps',
     sygic: 'Sygic',
     here: 'Here We Go',
-    "tomtom-go": 'TomTom GO',
+    "tomtomgo": 'TomTom GO',
     ...(titles || {}),
   };
 };
@@ -103,7 +103,7 @@ export const icons: Record<string, ImageRequireSource> = {
   petalmaps: require('./images/petalmaps.png'),
   sygic: require('./images/sygic.png'),
   here: require('./images/here.png'),
-  "tomtom-go": require('./images/tomtom-go.png'),
+  "tomtomgo": require('./images/tomtom-go.png'),
 };
 
 export const appKeys: string[] = Object.keys(icons);
